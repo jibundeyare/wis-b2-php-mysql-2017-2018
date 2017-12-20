@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Liste des posts</h1>
+            <table class="table">
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>body</th>
+                    <th>published</th>
+                </tr>
+                {% for row in rows %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.title }}</td>
+                    <td>{{ row.body }}</td>
+                    <td>{% if row.published %}oui{% else %}non{% endif %}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+# cache
+/var/cache/*
+!/var/cache/.keep
+
+# composer
+/vendor/
+
+# parameters
+db.yml

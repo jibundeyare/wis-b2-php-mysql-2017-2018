@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<ul>
+    {# boucle sur la variable rows #}
+    {% for row in rows %}
+    <li>{{ row }}</li>
+    {% endfor %}
+</ul>
+
+<p>{{ item.name }}</p>
+
+<ul>
+    {% for row in rows2 %}
+    <li>{{ row.name }}</li>
+    {% endfor %}
+</ul>
+
+<p>{{ now|date('d/m/Y H:i:s') }}</p>
+<p>{{ newYear|date('d/m/Y H:i:s') }}</p>
+{% endblock %}
